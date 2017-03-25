@@ -1,2 +1,2 @@
 # Basic-Phone-Book
-A simple program I made for an assignment.
+A simple program I made for an assignment using html
