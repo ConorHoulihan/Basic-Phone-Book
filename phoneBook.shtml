@@ -1,0 +1,53 @@
+<html>
+<head>
+<script>
+var nameValue = [];
+var phoneValue = [];
+var i = 0;
+function phonebook() {
+	nameValue[i] = myForm.names.value;
+	phoneValue[i] = myForm.phoneNumbers.value;
+    var table = document.getElementById("my_table");
+	
+	if (i == 0)
+	{
+	var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	
+	cell1.innerHTML = "Name";
+	cell2.innerHTML = "Phone Number";
+	
+	var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	
+	cell1.innerHTML = nameValue[i];
+	cell2.innerHTML = phoneValue[i];
+	i++;
+	}
+	else 
+	{
+	var row = table.insertRow(i);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	
+	cell1.innerHTML = nameValue[i];
+	cell2.innerHTML = phoneValue[i];
+	i++
+	}
+}
+</script>
+<title>Phone Book</title>
+</head>
+
+<body>
+		<form name = "myForm">
+			<div>Name: <input type="text" name="names" value=""></div>
+			<div style="position:relative;  top:-21px; right:-250px;">Phone Number: <input type="text" name="phoneNumbers" value=""></div><br>
+		<div style="position:relative;  top:-38px;"><button onclick = "phonebook()" type="button">Add a Friend</button></div>
+		</form>
+		<div style="position:relative;  top:-55px;"><table id="my_table" border="1"; width=50%>
+		</table></div>
+</body>
+</html>
